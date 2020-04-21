@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="script-src nonce-xxx" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+  </head>
+  <body>
+    <div id="login-page">
+      <div class="container pt-5">
+        <div class="row justify-content-sm-center">
+          <div class="col-sm-6 col-md-4">
+
+            <div class="card border-info text-center">
+              <div class="card-header">
+                Login to continue
+              </div>
+              <div class="card-body">
+                <form class="form-signin">
+                  <input type="text" class="form-control mb-2" placeholder="Email" required autofocus>
+                  <input type="password" class="form-control mb-2" placeholder="Password" required>
+                  <a class="btn btn-lg btn-primary btn-block mb-1" type="button" href="dashboard.html"
+                  >Login</a>
+                  <label class="checkbox float-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                  </label>
+                </form>
+              </div>
+            </div>
+            <a href="#" class="float-right">Create an account </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+  <script>
+    function login() {
+      document.getElementById('login-page').classList.add('d-none');
+    }
+  </script>
+</html>
